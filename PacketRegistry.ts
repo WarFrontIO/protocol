@@ -9,6 +9,8 @@ import {BasePacket} from "./packet/BasePacket";
 import {AttackActionPacket} from "./packet/game/AttackActionPacket";
 import {BoatActionPacket} from "./packet/game/BoatActionPacket";
 import {GameQueueUpdatePacket} from "./packet/game/GameQueueUpdatePacket";
+import {SpawnRequestPacket} from "./packet/game/SpawnRequestPacket";
+import {SpawnBundlePacket} from "./packet/game/SpawnBundlePacket";
 
 export const PROTOCOL_VERSION: number = 1;
 
@@ -38,6 +40,8 @@ export class PacketRegistry<T> {
 
 		// game
 		this.registerPacket(GameStartPacket);
+		this.registerPacket(SpawnRequestPacket);
+		this.registerPacket(SpawnBundlePacket);
 		this.registerPacket(GameTickPacket, this);
 
 		// game actions
