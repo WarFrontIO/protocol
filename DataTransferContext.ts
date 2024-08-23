@@ -103,7 +103,7 @@ export class DataTransferContext<T> {
 	inlinePacket<R>(packetRegistry: PacketRegistry<R>): void {
 		this.readTasks.push((obj: T) => {
 			const id = packetRegistry.reverseActionId(readBits(packetRegistry.getActionTypeBits()));
-			packetRegistry.getTransferContext(packetRegistry.reverseActionId(id)).deserialize(obj);
+			packetRegistry.getTransferContext(id).deserialize(obj);
 			//Restore required packet id, needed to identify the packet
 			(obj as BasePacket<unknown>).id = id;
 		});
