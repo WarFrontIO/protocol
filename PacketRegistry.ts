@@ -106,10 +106,11 @@ export class PacketRegistry<T> {
 	 * @returns The packet ID.
 	 */
 	reverseActionId(id: number): number {
-		if (!this.reverseActionMap.has(id)) {
+		const packetId = this.reverseActionMap.get(id);
+		if (!packetId) {
 			throw new PacketException(`Packet ID ${id} not found in packet map`);
 		}
-		return this.reverseActionMap.get(id)!;
+		return packetId;
 	}
 
 	/**
