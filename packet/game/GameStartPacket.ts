@@ -32,7 +32,6 @@ export class GameStartPacket extends BasePacket<GameStartPacket> {
 			transfer.optional("account").object(transfer => {
 				transfer.string("id", 8);
 				transfer.string("service", 20);
-				transfer.string("username", 20);
 				transfer.string("username", 32);
 				transfer.string("avatarURL", 256);
 			});
