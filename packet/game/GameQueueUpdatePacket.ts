@@ -1,6 +1,7 @@
+import type {PacketTransferContext} from "../../DataTransferContext";
+import type {GameModeIds} from "../../util/GameTypeIds";
 import {BasePacket} from "../BasePacket";
-import {PacketTransferContext} from "../../DataTransferContext";
-import {gameModeIdLength, GameModeIds} from "../../util/GameTypeIds";
+import {gameModeIdLength} from "../../util/GameTypeIds";
 
 export class GameQueueUpdatePacket extends BasePacket<GameQueueUpdatePacket> {
 	/**

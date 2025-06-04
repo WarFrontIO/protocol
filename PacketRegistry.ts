@@ -1,11 +1,12 @@
-import {DataTransferContext, PacketTransferContext} from "./DataTransferContext";
+import type {PacketTransferContext} from "./DataTransferContext";
+import type {BasePacket} from "./packet/BasePacket";
+import {DataTransferContext} from "./DataTransferContext";
 import {PacketException} from "./util/PacketException";
 import {HandshakeAuthPacket} from "./packet/handshake/HandshakeAuthPacket";
 import {HandshakeResponsePacket} from "./packet/handshake/HandshakeResponsePacket";
 import {GameStartPacket} from "./packet/game/GameStartPacket";
 import {GameTickPacket} from "./packet/game/GameTickPacket";
 import {GameActionPacket} from "./packet/game/GameActionPacket";
-import {BasePacket} from "./packet/BasePacket";
 import {AttackActionPacket} from "./packet/game/AttackActionPacket";
 import {BoatActionPacket} from "./packet/game/BoatActionPacket";
 import {GameQueueUpdatePacket} from "./packet/game/GameQueueUpdatePacket";

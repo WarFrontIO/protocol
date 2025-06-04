@@ -1,4 +1,4 @@
-import {PacketTransferContext} from "../../DataTransferContext";
+import type {PacketTransferContext} from "../../DataTransferContext";
 import {BasePacket} from "../BasePacket";
 
 export class HandshakeAuthPacket extends BasePacket<HandshakeAuthPacket> {

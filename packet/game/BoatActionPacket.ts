@@ -1,5 +1,5 @@
+import type {PacketTransferContext} from "../../DataTransferContext";
 import {GameActionPacket} from "./GameActionPacket";
-import {PacketTransferContext} from "../../DataTransferContext";
 
 export class BoatActionPacket extends GameActionPacket<BoatActionPacket> {
 	/**

@@ -1,4 +1,4 @@
-import {PacketTransferContext} from "../DataTransferContext";
+import type {PacketTransferContext} from "../DataTransferContext";
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-declaration-merging
 export abstract class BasePacket<T> {

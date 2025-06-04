@@ -1,5 +1,5 @@
+import type {PacketTransferContext} from "../../DataTransferContext";
 import {BasePacket} from "../BasePacket";
-import {PacketTransferContext} from "../../DataTransferContext";
 
 export class SpawnRequestPacket extends BasePacket<SpawnRequestPacket> {
 	/**

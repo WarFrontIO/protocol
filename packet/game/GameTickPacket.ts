@@ -1,7 +1,7 @@
-import {PacketTransferContext} from "../../DataTransferContext";
-import {GameActionPacket} from "./GameActionPacket";
+import type {PacketTransferContext} from "../../DataTransferContext";
+import type {GameActionPacket} from "./GameActionPacket";
+import type {PacketRegistry} from "../../PacketRegistry";
 import {BasePacket} from "../BasePacket";
-import {PacketRegistry} from "../../PacketRegistry";
 
 export class GameTickPacket extends BasePacket<GameTickPacket> {
 	/**

@@ -1,7 +1,8 @@
-import {PacketTransferContext} from "../../DataTransferContext";
-import {gameModeIdLength, GameModeIds} from "../../util/GameTypeIds";
+import type {PacketTransferContext} from "../../DataTransferContext";
+import type {UserAccount} from "../../util/ProtocolUtils";
+import type {GameModeIds} from "../../util/GameTypeIds";
+import {gameModeIdLength} from "../../util/GameTypeIds";
 import {BasePacket} from "../BasePacket";
-import {UserAccount} from "../../util/ProtocolUtils";
 
 export class GameStartPacket extends BasePacket<GameStartPacket> {
 	/**

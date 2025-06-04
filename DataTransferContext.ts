@@ -1,7 +1,7 @@
+import type {PacketRegistry} from "./PacketRegistry";
+import type {GameActionPacket} from "./packet/game/GameActionPacket";
+import type {BasePacket} from "./packet/BasePacket";
 import {PacketException} from "./util/PacketException";
-import {PacketRegistry} from "./PacketRegistry";
-import {GameActionPacket} from "./packet/game/GameActionPacket";
-import {BasePacket} from "./packet/BasePacket";
 
 export class DataTransferContext<T> {
 	private staticLength: number = 0;
