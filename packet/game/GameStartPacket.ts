@@ -14,7 +14,7 @@ export class GameStartPacket extends BasePacket<GameStartPacket> {
 	 * @param players The players in the game
 	 */
 	constructor(
-		public readonly map: number,
+		public readonly map: string,
 		public readonly mode: GameModeIds,
 		public readonly seed: number,
 		public readonly clientId: number,
@@ -22,7 +22,7 @@ export class GameStartPacket extends BasePacket<GameStartPacket> {
 	) {super()}
 
 	buildTransferContext(transfer: PacketTransferContext<GameStartPacket>): void {
-		transfer.number("map", 24);
+		transfer.string("map", 8);
 		transfer.number("mode", gameModeIdLength);
 		transfer.number("seed", 32);
 		//TODO: Player count (and thus length of these) should be decided by the game server
